@@ -5,10 +5,9 @@
  */
 package br.cursoJorge.teste;
 
+import br.cursoJorge.jpa.EntityManagerUtil;
 import br.cursoJorge.modelo.Pais;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 /**
  *
@@ -21,19 +20,19 @@ public class TestePersistirPais {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("CursoJpaJorge");
-        EntityManager em = emf.createEntityManager();
+        
+        EntityManager em = EntityManagerUtil.getEntityManager();
         
         Pais pais = new Pais();
       
-        pais.setNome("Brasil");
-        pais.setIso("BRA");
+        pais.setNome("Paraguai");
+        pais.setIso("PRG");
         
         em.getTransaction().begin();
         em.persist(pais);
         em.getTransaction().commit();
         em.close();
-        emf.close();
+    
         
         
         
