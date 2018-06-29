@@ -31,6 +31,9 @@ public class TesteRemoverPais {
         em.getTransaction().commit();
         em.close();
         emf.close();
+        
+        
+        
     }
     
 }

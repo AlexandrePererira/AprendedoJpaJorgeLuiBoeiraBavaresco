@@ -5,7 +5,11 @@
  */
 package br.cursoJorge.teste;
 
+import br.cursoJorge.jpa.EntityManagerUtil;
+import br.cursoJorge.modelo.Endereco;
 import br.cursoJorge.modelo.Pais;
+import br.cursoJorge.modelo.PessoaFisica;
+import br.cursoJorge.modelo.TipoEndereco;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -32,6 +36,8 @@ public class TesteAlterarPais {
         em.getTransaction().commit();
         em.close();
         emf.close();
+        
+      
     }
-    
+
 }
